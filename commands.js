@@ -13,7 +13,7 @@ const PUMDADA = {
 	type: 1,
 };
 const Vibo = {
-	name: "Vibosin",
+	name: "vibosin",
 	description: "Vibo",
 	type: 1,
 };
