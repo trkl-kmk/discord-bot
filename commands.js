@@ -28,6 +28,6 @@ const GOPE = {
 	type: 1,
 };
 
-const ALL_COMMANDS = [TEST_COMMAND, PUMDADA, VIBO, GABO, GABO];
+const ALL_COMMANDS = [TEST_COMMAND, PUMDADA, VIBO, GABO, GOPE];
 
 InstallGlobalCommands(process.env.APP_ID, ALL_COMMANDS);
