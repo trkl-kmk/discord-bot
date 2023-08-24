@@ -24,7 +24,7 @@ const activeGames = {};
  */
 app.post("/interactions", async function (req, res) {
   // Interaction type and data
-  const { type, id, data } = req.body;
+  const { type, data } = req.body;
 
   /**
    * Handle verification requests
@@ -57,7 +57,7 @@ app.post("/interactions", async function (req, res) {
         type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
         data: {
           // Fetches a random emoji to send from a helper function
-          content: "PUMDADADADAD" + getRandomEmoji(),
+          content: "PUMDADA" + getRandomEmoji(),
         },
       });
     }
