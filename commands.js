@@ -22,7 +22,12 @@ const GABO = {
 	description: "gabok",
 	type: 1,
 };
+const GOPE = {
+	name: "gope",
+	description: "georgi ivanov",
+	type: 1,
+};
 
-const ALL_COMMANDS = [TEST_COMMAND, PUMDADA, VIBO, GABO];
+const ALL_COMMANDS = [TEST_COMMAND, PUMDADA, VIBO, GABO, GABO];
 
 InstallGlobalCommands(process.env.APP_ID, ALL_COMMANDS);
