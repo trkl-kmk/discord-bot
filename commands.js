@@ -10,7 +10,7 @@ const TEST_COMMAND = {
 const PUMDADA = {
 	name: "PUM",
 	description: "DADA",
-	type: 1,
+	type: 2,
 };
 
 const ALL_COMMANDS = [TEST_COMMAND, PUMDADA];
