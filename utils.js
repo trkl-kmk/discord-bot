@@ -68,7 +68,7 @@ export function getServerIP() {
     'Authorization': 'Bearer 2bDdcYYAE0mIDiJyAPRDpOYs0VW_ZiCov7eQH4EbPsP3sQn2',
     'Ngrok-Version': '2'
   }
-});
+})
 
 .then(response => {
   if (!response.ok) {
