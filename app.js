@@ -20,7 +20,7 @@ app.use(express.json({ verify: VerifyDiscordRequest(process.env.PUBLIC_KEY) }));
 const activeGames = {};
 
 /**
- * Interactions endpoint URL where Discord will send HTTP requests
+* Interactions endpoint URL where Discord will send HTTP requests
  */
 app.post("/interactions", async function (req, res) {
 	// Interaction type and data
@@ -51,43 +51,13 @@ app.post("/interactions", async function (req, res) {
 				},
 			});
 		}
-		if (name === "pum") {
+		if (name === "ip") {
 			// Send a message into the channel where command was triggered from
 			return res.send({
 				type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
 				data: {
 					// Fetches a random emoji to send from a helper function
-					content: "PUMDADA" + getRandomEmoji(),
-				},
-			});
-		}
-		if (name === "vibosin") {
-			// Send a message into the channel where command was triggered from
-			return res.send({
-				type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
-				data: {
-					// Fetches a random emoji to send from a helper function
-					content: "vibolino " + getRandomEmoji(),
-				},
-			});
-		}
-		if (name === "gabo") {
-			// Send a message into the channel where command was triggered from
-			return res.send({
-				type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
-				data: {
-					// Fetches a random emoji to send from a helper function
-					content: "gabolino " + getRandomEmoji(),
-				},
-			});
-		}
-		if (name === "gope") {
-			// Send a message into the channel where command was triggered from
-			return res.send({
-				type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
-				data: {
-					// Fetches a random emoji to send from a helper function
-					content: "gopopop " + getRandomEmoji(),
+					content: "The current Minecraft server IP is:" + getServerIP(),
 				},
 			});
 		}

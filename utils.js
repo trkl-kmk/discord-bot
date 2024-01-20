@@ -60,3 +60,30 @@ export function getRandomEmoji() {
 export function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
+
+// Get server IP from ngrok
+export function getServerIP() {
+  fetch('https://api.ngrok.com/endpoints', {
+  headers: {
+    'Authorization': 'Bearer {API_KEY}',
+    'Ngrok-Version': '2'
+  }
+});
+
+.then(response => {
+  if (!response.ok) {
+    throw new Error('Network response was not ok');
+  }
+  return response.json(); // Assuming the response is JSON
+})
+.then(data => {
+  if (data && data.public_url) {
+    ruturn(data.public_url);
+  } else {
+    console.error('Public URL not found in the response.');
+  }
+})
+.catch(error => {
+  console.error('There was a problem with the fetch operation:', error);
+});
+}
