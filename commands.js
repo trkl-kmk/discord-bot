@@ -7,8 +7,10 @@ const TEST_COMMAND = {
 	description: "Basic command",
 	type: 1,
 };
+
+// MC server IP from Ngrok
 const IP = {
-name: "IP",
+name: "ip",
 description: "Get MC server IP",
 type: 1,
 }
