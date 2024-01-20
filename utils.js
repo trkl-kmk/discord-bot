@@ -65,7 +65,7 @@ export function capitalize(str) {
 export function getServerIP() {
   fetch('https://api.ngrok.com/endpoints', {
   headers: {
-    'Authorization': 'Bearer {API_KEY}',
+    'Authorization': 'Bearer 2bDdcYYAE0mIDiJyAPRDpOYs0VW_ZiCov7eQH4EbPsP3sQn2',
     'Ngrok-Version': '2'
   }
 });
